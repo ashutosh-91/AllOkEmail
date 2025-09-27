@@ -1,0 +1,6 @@
+@AllOkEmail_HostAddress = http://localhost:5211
+
+GET {{AllOkEmail_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
