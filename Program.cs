@@ -1,8 +1,14 @@
+using AllOkEmail.Services;
+using AllOkEmail.Services.Interface;
+using DnsClient;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddSingleton<ILookupClient,LookupClient>();
+builder.Services.AddTransient<IEmailValidationService, EmailValidationService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

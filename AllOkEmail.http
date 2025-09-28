@@ -1,6 +1,6 @@
 @AllOkEmail_HostAddress = http://localhost:5211
 
-GET {{AllOkEmail_HostAddress}}/weatherforecast/
+GET {{AllOkEmail_HostAddress}}/VerifyEmail/V1
 Accept: application/json
 
 ###
