@@ -7,6 +7,8 @@ namespace AllOkEmail.Enums
         [Description("Success")]
         Success,
         [Description("InValid")]
-        InValid
+        InValid,
+        [Description("Failed")]
+        Failed
     }
 }

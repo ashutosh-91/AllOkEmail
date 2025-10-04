@@ -34,11 +34,11 @@ namespace AllOkEmail.Services
             {
                 return mxRecordLookup;
             }
-            var isBlackListed = await IsBlackListedBySpamhausAsync(_mxIpAddresses);
-            if (!isBlackListed.IsSuccess)
-            {
-                return isBlackListed;
-            }
+            //var isBlackListed = await IsBlackListedBySpamhausAsync(_mxIpAddresses);
+            //if (!isBlackListed.IsSuccess)
+            //{
+            //    return isBlackListed;
+            //}
             var isDisposable = await DisposableEmailValidationAsync(domain);
             if (!isDisposable.IsSuccess)
             {

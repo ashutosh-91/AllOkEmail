@@ -25,7 +25,7 @@ namespace AllOkEmail.Controllers
             var response= await _emailValidationService.ValidateEmailAsync(email);
             if (!response.IsSuccess)
             {
-                return new ApiResponse(false, response.StatusCode, nameof(response.Status),response.Message, email,email.Split('@')[1].ToLowerInvariant());
+                return new ApiResponse(false, response.StatusCode, nameof(Status.Failed),response.Message, email,email.Split('@')[1].ToLowerInvariant());
             }
 
             return new ApiResponse(true, HttpStatusCode.OK,nameof(Status.Success), "Validation Passed", email, email.Split('@')[1].ToLowerInvariant());
