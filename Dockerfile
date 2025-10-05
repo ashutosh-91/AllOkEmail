@@ -13,9 +13,7 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:${DOTNET_VERSION}@sha256:6c4df091e4e531bb93bdbfe7e7f0998e7ced344f54426b7e874116a3dc3233ff
 ENV ASPNETCORE_HTTP_PORTS=5000
-ENV ASPNETCORE_HTTPS_PORTS=5001
 EXPOSE 5000
-EXPOSE 5001
 WORKDIR /app
 COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "AllOkEmail.dll"]
